@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a91620">
+  <meta name="description" content="Informasi layanan CV. Tabung Berkah Jaya. Halaman informasi statis; pemesanan online belum tersedia di GitHub Pages.">
+  <title>CV. Tabung Berkah Jaya — Informasi Layanan</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --red: #a91620;
+      --red-dark: #76111a;
+      --ink: #271d1e;
+      --muted: #71676a;
+      --paper: #fffaf7;
+      --line: #f0dfda;
+      --green: #237b4b;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); line-height: 1.65; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .top-note { padding: 9px 16px; color: #fff; background: #351e20; text-align: center; font-size: .84rem; }
+    .top-note strong { color: #ffd9a1; }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-weight: 800; line-height: 1.2; }
+    .brand img { width: 52px; height: 52px; object-fit: contain; border-radius: 14px; background: white; }
+    .brand small { display: block; margin-top: 4px; color: var(--muted); font-size: .7rem; font-weight: 600; letter-spacing: .08em; }
+    .nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
+    .nav-links a { color: #514346; text-decoration: none; font-size: .94rem; font-weight: 650; }
+    .nav-links a:hover { color: var(--red); }
+    .hero { position: relative; overflow: hidden; padding: 68px 0 74px; color: #fff; background: linear-gradient(118deg, #85131c 0%, #b51c27 55%, #df4542 100%); }
+    .hero::after { position: absolute; right: -110px; bottom: -340px; width: 590px; height: 590px; border: 1px solid #ffffff30; border-radius: 50%; box-shadow: 0 0 0 55px #ffffff0d, 0 0 0 110px #ffffff0a; content: ""; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(260px, .85fr); align-items: center; gap: 40px; }
+    .eyebrow { display: inline-flex; padding: 7px 12px; border: 1px solid #ffffff55; border-radius: 999px; background: #ffffff14; font-size: .78rem; font-weight: 800; letter-spacing: .12em; }
+    h1 { max-width: 700px; margin: 20px 0 16px; font-size: clamp(2.35rem, 5vw, 4.5rem); line-height: 1.06; letter-spacing: -.045em; }
+    .hero-copy { max-width: 610px; margin: 0; color: #ffebea; font-size: clamp(1rem, 1.6vw, 1.16rem); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .button { display: inline-flex; min-height: 47px; align-items: center; justify-content: center; padding: 10px 18px; border: 1px solid #fff; border-radius: 12px; color: var(--red-dark); background: #fff; text-decoration: none; font-weight: 800; }
+    .button.outline { color: #fff; background: transparent; }
+    .hero-mark { display: grid; min-height: 300px; place-items: center; padding: 26px; border: 1px solid #ffffff55; border-radius: 32px; background: #ffffff13; box-shadow: 0 22px 65px #4e0a1030; backdrop-filter: blur(7px); }
+    .hero-mark img { width: min(100%, 360px); max-height: 295px; object-fit: contain; filter: drop-shadow(0 18px 22px #37090c40); }
+    .section { padding: 72px 0; }
+    .section.white { background: white; }
+    .section-head { max-width: 660px; margin-bottom: 28px; }
+    .kicker { color: var(--red); font-size: .78rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+    h2 { margin: 8px 0 10px; font-size: clamp(1.75rem, 3vw, 2.45rem); line-height: 1.2; letter-spacing: -.03em; }
+    .section-head p, .card p, .step p { margin: 0; color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: #fff; }
+    .card-icon { display: grid; width: 44px; height: 44px; place-items: center; border-radius: 13px; color: var(--red); background: #fff0ed; font-size: 1.2rem; font-weight: 900; }
+    .card h3 { margin: 16px 0 7px; font-size: 1.08rem; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .step { padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: #fff; }
+    .step-number { color: var(--red); font-size: .78rem; font-weight: 900; letter-spacing: .12em; }
+    .step h3 { margin: 8px 0 6px; font-size: 1rem; }
+    .notice { display: grid; grid-template-columns: auto 1fr; gap: 16px; padding: 22px; border: 1px solid #f1d89f; border-radius: 18px; background: #fff8e9; }
+    .notice-mark { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 50%; color: #694600; background: #ffe4a8; font-weight: 900; }
+    .notice h3 { margin: 1px 0 5px; font-size: 1.02rem; }
+    .notice p { margin: 0; color: #685b48; }
+    .footer { padding: 26px 0; border-top: 1px solid var(--line); color: var(--muted); background: #fff; font-size: .88rem; }
+    .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; }
+    :focus-visible { outline: 3px solid #1268c4; outline-offset: 3px; }
+
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 30px, 560px); }
+      .nav { min-height: 68px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 12px; padding-block: 13px; }
+      .nav-links { gap: 10px 18px; }
+      .nav-links a { font-size: .86rem; }
+      .hero { padding: 46px 0 52px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-mark { min-height: 210px; padding: 16px; border-radius: 24px; }
+      .hero-mark img { max-height: 225px; }
+      .section { padding: 54px 0; }
+      .cards { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 430px) {
+      .steps { grid-template-columns: 1fr; }
+      .actions { flex-direction: column; align-items: stretch; }
+      .button { width: 100%; }
+      .notice { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-note"><strong>Halaman informasi statis.</strong> Pemesanan online dan akun belum tersedia di GitHub Pages.</div>
+  <header class="wrap nav">
+    <a class="brand" href="#" aria-label="CV. Tabung Berkah Jaya">
+      <img src="logo-beranda.png" alt="">
+      <span>CV. TABUNG BERKAH JAYA<small>LAYANAN LPG 3 KG</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a href="#layanan">Layanan</a>
+      <a href="#cara-pesan">Cara pesan</a>
+      <a href="#status">Status situs</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">INFORMASI LAYANAN</span>
+          <h1>Gas Habis? Rebahan Aja, Tinggal Klik, Gas Datang!</h1>
+          <p class="hero-copy">CV. Tabung Berkah Jaya melayani informasi dan pengantaran LPG 3 kg. Ketersediaan produk dan layanan mengikuti wilayah serta ketentuan yang berlaku.</p>
+          <div class="actions">
+            <a class="button" href="#status">Lihat status situs</a>
+            <a class="button outline" href="#layanan">Kenali layanan</a>
+          </div>
+        </div>
+        <div class="hero-mark"><img src="logo-beranda.png" alt="Logo CV. Tabung Berkah Jaya"></div>
+      </div>
+    </section>
+
+    <section class="section white" id="layanan">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Layanan kami</span>
+          <h2>Informasi pengantaran LPG yang mudah dipahami</h2>
+          <p>Gunakan informasi ini untuk mengetahui alur layanan. Halaman ini tidak mengirim pesanan atau menyimpan data pelanggan.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">01</span>
+            <h3>Informasi produk</h3>
+            <p>Jenis produk, harga, dan ketersediaan perlu dikonfirmasi kepada penyedia layanan sebelum pemesanan.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">02</span>
+            <h3>Pengantaran oleh kurir</h3>
+            <p>Wilayah, jadwal, dan ketersediaan pengantaran mengikuti konfirmasi operasional.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">03</span>
+            <h3>Pembayaran yang jelas</h3>
+            <p>Metode dan rincian pembayaran harus dikonfirmasi melalui kanal layanan resmi yang tersedia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cara-pesan">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Alur layanan</span>
+          <h2>Langkah umum sebelum pengantaran</h2>
+          <p>Ini hanya panduan informasi, bukan alur transaksi aktif di website ini.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><span class="step-number">LANGKAH 01</span><h3>Tanyakan ketersediaan</h3><p>Pastikan produk dan wilayah layanan tersedia.</p></article>
+          <article class="step"><span class="step-number">LANGKAH 02</span><h3>Konfirmasi rincian</h3><p>Periksa harga, jumlah, alamat, dan biaya pengantaran.</p></article>
+          <article class="step"><span class="step-number">LANGKAH 03</span><h3>Tentukan pembayaran</h3><p>Gunakan metode pembayaran yang dikonfirmasi penyedia.</p></article>
+          <article class="step"><span class="step-number">LANGKAH 04</span><h3>Tunggu konfirmasi</h3><p>Pengantaran dilakukan setelah ketersediaan dikonfirmasi.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="status">
+      <div class="wrap">
+        <div class="notice">
+          <span class="notice-mark" aria-hidden="true">i</span>
+          <div>
+            <h3>Website ini hanya halaman statis GitHub Pages</h3>
+            <p>Login, pendaftaran, pemesanan, pembayaran, dashboard admin, database, pelacakan GPS kurir, dan koneksi ESP32 memerlukan server PHP/MySQL terpisah. Fitur-fitur tersebut tidak aktif pada halaman ini. Jangan masukkan data pribadi atau pembayaran di sini.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-row">
+      <span>© CV. Tabung Berkah Jaya</span>
+      <span>Informasi statis — transaksi tidak tersedia di halaman ini.</span>
+    </div>
+  </footer>
+</body>
+</html>
